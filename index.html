@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* ==================== CSS：每个部分长什么样 ==================== */
+
+        /* 🌍 body = 整个页面背景 */
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            /* ↓ 背景渐变色（改这里 = 改整页背景） */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 📄 card = 中间那个大白卡片 */
+        .card {
+            background: rgb(255, 255, 255); /* 卡片背景色 */
+            border-radius: 20px;           /* 圆角大小 */
+            padding: 50px;                 /* 内边距 */
+            max-width: 600px;              /* 最大宽度 */
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* 阴影 */
+            text-align: center;
+        }
+
+        /* 🧑 avatar = 头像圆圈 */
+        .avatar {
+            width: 120px;                  /* 宽 */
+            height: 120px;                 /* 高 */
+            border-radius: 50%;            /* 50% = 圆形 */
+            background: linear-gradient(135deg, #048697, #2e0bf5); /* 头像背景色 */
+            color: white;                  /* emoji 颜色 */
+            font-size: 50px;               /* emoji 大小 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+
+        /* 📝 h1 = "你好我是XXX" 大标题 */
+        h1 {
+            color: #333;          /* 文字颜色 */
+            margin: 10px 0;
+            font-size: 28px;      /* 字号 */
+        }
+
+        /* 🏷️ tagline = "刚高考完..." 副标题 */
+        .tagline {
+            color: #888;          /* 文字颜色 */
+            font-size: 14px;      /* 字号 */
+            margin-bottom: 30px;
+        }
+
+        /* 📋 info-box = "坐标/状态/在学/兴趣" 灰色信息栏 */
+        .info-box {
+            background: #f8f9fa;  /* 浅灰背景 */
+            border-radius: 12px;  /* 圆角 */
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* info-box 里面的每一行字 */
+        .info-box p {
+            margin: 8px 0;
+            color: #555;          /* 文字颜色 */
+        }
+
+        /* 🔘 btn = "点我一下" 按钮 */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #1d92a7, hsl(258, 88%, 33%)); /* 按钮渐变 */
+            color: white;                /* 按钮文字颜色 */
+            text-decoration: none;
+            border-radius: 30px;         /* 圆角（值越大越圆） */
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+
+        /* 鼠标悬停在按钮上时放大一点点 */
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* 📎 footer = 底部小字 */
+        .footer {
+            margin-top: 30px;
+            color: #aaa;          /* 文字颜色 */
+            font-size: 12px;      /* 字号 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== 下面是 HTML，控制页面的内容 ====== -->
+
+    <div class="card">
+        <div class="avatar">🧑</div>
+
+        <h1>你好，我是 [尉城源]</h1>
+        <p class="tagline">🌟 刚高考完 · 正在学编程 · 未来可期</p>
+
+        <div class="info-box">
+            <p>📍 坐标：中国·山西·运城</p>
+            <p>🎓 状态：即将进入大学</p>
+            <p>📚 正在学：Python · HTML · CSS</p>
+            <p>💡 兴趣：编程、自动化、数据分析、打瓦</p>
+            <p>🛠️ 技能：会用 AI 写网页 · 会改 CSS 颜色</p>
+        </div>
+
+        <button class="btn" onclick="sayHi()">点我一下 👋</button>
+
+        <p class="footer">
+            用 ❤️ 和 AI 一起做的 · 学编程的第 1 天
+        </p>
+    </div>
+
+    <!-- ====== 下面是 JavaScript，控制页面的交互 ====== -->
+
+    <script>
+        function sayHi() {
+            alert("你好👋我是尉城源。\n\n欢迎来到我的主页！🚀\n\n这是我做的第一个网页。");
+        }
+    </script>
+
+</body>
+</html>
